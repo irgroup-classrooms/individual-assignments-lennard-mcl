@@ -58,5 +58,5 @@ Run the file command on a few different directories and files and note the outpu
 7. cat
 Exercises
 
-Run cat on different files and directories. Then try to cat multiple files. 
+Run cat on different files and directories. Then try to cat multiple files.
 ```
