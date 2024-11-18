@@ -3,7 +3,6 @@
 - 🔭 I’m currently working on my first Github repository
 - 🌱 I’m currently learning - Markdown with # and 
 - 👯 I’m looking to collaborate on 
-- 🤔 I’m looking for help with ...
 - 💬 Ask me about phyton print("Hello, World!")
 - 📫 How to reach me: [lennard_mcl]((https://www.instagram.com/lennard_mcl/))
 - 😄 Pronouns: **he/him**
