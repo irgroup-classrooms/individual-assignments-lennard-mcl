@@ -22,3 +22,11 @@ Exercises
 
 ---
 
+5. 
+Note the timestamp:
+ --> $ ls -l
+       total 4
+       -rw-r--r-- 1 lenna 197609 614 Nov 20 14:44 CommandLine.md
+
+Touch the file and check the timestamp once again:
+--> 
