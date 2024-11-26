@@ -1,6 +1,6 @@
 # Analysis of the Lord of the Rings Dataset
 
-## 1. Dataset Overview
+## 2. Dataset Overview
 The dataset (`lotr_scripts.csv`) contains dialog data from the Lord of the Rings movies. Below are the main fields included:
 
 - **film**: The name of the movie (*The Fellowship of the Ring*, *The Two Towers*, or *The Return of the King*).
@@ -9,8 +9,8 @@ The dataset (`lotr_scripts.csv`) contains dialog data from the Lord of the Rings
 - **dialog**: The spoken dialog by the character.
 
 ---
-## 2. Dirty Data
-Scripts:
+## 3. Dirty Data
+### Scripts:
 - $ head -n 10 lotr_scripts.csv
 - ,char,dialog,movie
 - 0,DEAGOL,"Oh Smeagol Ive got one! , Ive got a fish Smeagol, Smeagol!    ",The Return of the King
@@ -22,8 +22,8 @@ Scripts:
 - 6,SMEAGOL,Give us that! Deagol my love  ,The Return of the King
 - 7,DEAGOL,Why?  ,The Return of the King
 - 8,SMEAGOL,"Because' , it's my birthday and I wants it.  ",The Return of the King
-Characters:
-$ head -n 10 lotr_characters.csv
+### Characters:
+- $ head -n 10 lotr_characters.csv
 - birth,death,gender,hair,height,name,race,realm,spouse
 - ,,Female,,,Adanel,Men,,Belemir
 - TA 2978,"February 26 ,3019",Male,Dark (book) Light brown (movie),,Boromir,Men,,
@@ -34,9 +34,9 @@ $ head -n 10 lotr_characters.csv
 - ,,Male,,,Annael,Elves,,
 - YT,FA 455,Male,Golden,,Angrod,Elves,,Eldalótë
 - ,,,,,Angrim,,,
-Remove rows with empty fields:
+### Remove rows with empty fields:
 - $ sed '/^$/d' lotr_scripts.csv > cleaned_lotr_scripts.csv
-Standardize character names to title case:
+### Standardize character names to title case:
 - $ sed -E 's/char,([a-z]+)/\U\1/' cleaned_lotr_scripts.csv > temp.csv && mv temp.csv cleaned_lotr_scripts.csv
-Remove special characters in dialog:
+### Remove special characters in dialog:
 - $ sed -E 's/[^a-zA-Z0-9 .,!?'\''"]//g' cleaned_lotr_scripts.csv > temp.csv && mv temp.csv cleaned_lotr_scripts.csv
