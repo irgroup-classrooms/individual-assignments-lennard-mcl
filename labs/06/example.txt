@@ -1,1 +1,3 @@
 "This is the beginning of a new file!\n" 
+
+This is an appended line.
